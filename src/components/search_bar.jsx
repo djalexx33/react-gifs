@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
-  handleUpdate = (event) => {
-    console.log(event.target.value);
+  handleUpdate = this.handleUpdate.bind(this);
+
+  handleUpdate(event) {
+    const { searchFunction } = this.props;
+    searchFunction(event.target.value);
   }
 
   render() {
