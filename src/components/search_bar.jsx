@@ -5,6 +5,7 @@ class SearchBar extends Component {
 
   handleUpdate(event) {
     const { searchFunction } = this.props;
+    // Change the state of term
     searchFunction(event.target.value);
   }
 
